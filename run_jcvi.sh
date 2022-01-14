@@ -1,10 +1,14 @@
 #!/bin/bash -l
-#PBS -l nodes=1:ppn=8,mem=30g,walltime=6:00:00
-#PBS -m abe
-#PBS -M haasx092@umn.edu
-#PBS -e run_jcvi.err
-#PBS -o run_jcvi.out
-#PBS -N run_jcvi
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --time=6:00:00
+#SBATCH --mem=30g
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=haasx092@umn.edu
+#SBATCH -p amdsmall
+#SBATCH --account=jkimball
+#SBATCH -o run_jcvi.out
+#SBATCH -e run_jcvi.err
 
 cd /home/jkimball/haasx092/synteny_figure
 
