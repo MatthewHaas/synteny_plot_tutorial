@@ -17,6 +17,8 @@ Colors are specified in the `layout` file. We chose our color scheme after seeki
 
 **Note:** As of this writing (14 January 2022), GitHub does not support colorizing text using HTML or other various methods that I found to insert color. The method that finally worked was to use [placeholder.com](https://placeholder.com). If previews of the color are unavaible, I apologize for that but the reason is likely a broken link. It's a minor thing, but feel free to report it to me if you encounter that issue.
 
+When you're done, the finished figure should look like this:<br>
+<img src="images/Figure_1F.png" width=500>
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
