@@ -21,7 +21,7 @@ Colors are specified in the `layout` file. We chose our color scheme after seeki
 - ![#4b0082](https://via.placeholder.com/15/4b0082/000000?text=+) `#4b0082` is for _Zizania palustris_
 
 When you're done, the finished figure should look like this:<br>
-<img src="images/Figure_1F.png" width=500>
+<img src="images/Figure_1F_whitespace_cropped.png" width=500>
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
