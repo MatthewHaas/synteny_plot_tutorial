@@ -1,0 +1,7 @@
+#y, xstart, xend, rotation, color, label, va, bed, label_va
+0.8, 0.18, 0.98, 0, #235e39, Zizania\ latifolia, top, latifolia.bed, center
+0.6, 0.18, 0.98, 0, #4b0082, Zizania\ palustris, top, wild_rice.bed, center
+0.4, 0.18, 0.98, 0, #235e39, Zizania\ latifolia, top, latifolia.bed, center
+# edges
+e, 0, 1, latifolia.wild_rice.anchors.simple
+e, 1, 2, latifolia.wild_rice.anchors.simple
