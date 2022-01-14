@@ -1,0 +1,5 @@
+#y, xstart, xend, rotation, color, label, va, bed, label_va
+0.6, 0.1, 0.9, 0, #c3db0f, NWR, top, wild_rice.bed, center
+0.4, 0.1, 0.9, 0, #6b7fff, Rice, top, oryza.bed, center
+# edges
+e, 0, 1, wild_rice.oryza.anchors.simple
