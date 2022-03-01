@@ -31,7 +31,7 @@ Here are some details about the [`layout`](helper_files/layout) file specificati
 When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1C_whitespace_cropped.png" width=700>
 
-## _Zizania palustris_ vs _Zizania latifolia_ 2015 version
+## _Zizania palustris_ vs _Zizania latifolia_ (2015 version)
 This figure was made using the 2015 version of the _Z. latifolia_ genome. You can find that paper [here](https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.12912) or using the following citation:<br><br>
 **Guo L., Qiu J., Han Z., Ye Z., Chen C., Liu C., Xin X., _et al._** (2015) A host plant genome (_Zizania latifolia_) after a century-long endophyte infection. _Plant J._ **83**, 600-609
 
@@ -44,7 +44,7 @@ Colors are specified in the `layout` file. We chose our color scheme after seeki
 When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1F_whitespace_cropped.png" width=700>
 
-## _Zizania palustris_ vs _Zizania latifolia_ 2022 version
+## _Zizania palustris_ vs _Zizania latifolia_ (2022 version)
 The first step is to convert the `GFF` file to `BAM` format:
 ```python
 python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
