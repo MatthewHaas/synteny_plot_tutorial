@@ -39,5 +39,11 @@ Colors are specified in the `layout` file. We chose our color scheme after seeki
 When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1F_whitespace_cropped.png" width=700>
 
+## _Zizania palustris_ vs. _Zizania latifolia_ (2022 version)
+The first step is to convert the `GFF` file to `BAM` format:
+```python
+python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
+```
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
