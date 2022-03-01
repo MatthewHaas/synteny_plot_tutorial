@@ -45,7 +45,14 @@ When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1F_whitespace_cropped.png" width=700>
 
 ## _Zizania palustris_ vs _Zizania latifolia_ (2022 version)
-The first step is to convert the `GFF` file to `BAM` format:
+The data were downloaded from [here](https://download.cncb.ac.cn/gwh/Plants/Zizania_latifolia_Zlat_genome_v1_GWHBFHI00000000/) using the following commands:
+```bash
+wget https://download.cncb.ac.cn/gwh/Plants/Zizania_latifolia_Zlat_genome_v1_GWHBFHI00000000/GWHBFHI00000000.gff.gz --no-check-certificate
+```
+**Note:** The `--ho-check-certificate` was added because the MSI system prompted me to add it.
+
+
+After retrieving the necessary data, the next step is to convert the `GFF` file to `BAM` format:
 ```python
 python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
 ```
