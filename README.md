@@ -53,8 +53,13 @@ wget https://download.cncb.ac.cn/gwh/Plants/Zizania_latifolia_Zlat_genome_v1_GWH
 
 
 After retrieving the necessary data, the next step is to convert the `GFF` file to `BAM` format:
-```python
+```bash
 python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
+```
+
+Next:
+```bash
+python -m jcvi.formats.fasta format GWHBFHI00000000.CDS.fasta.gz latifolia_version_2.cds
 ```
 
 ## Microsynteny
