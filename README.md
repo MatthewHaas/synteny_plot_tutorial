@@ -1,13 +1,13 @@
 # synteny plot tutorial
 
 ## Directory
-1. [_Zizania palustris_ vs. _Oryza sativa_](#-Zizania-palustris-vs.-Oryza-sativa)
-2. [_Zizania palustris_ vs. _Zizania latifolia_ (2015 version)](#-Zizania-palustris-vs.-Zizania-latifolia-2015-version)
-3. [_Zizania palustris_ vs. _Zizania latifolia_ (2022 version)](#-Zizania-palustris-vs.-Zizania-latifolia-2022-versionn)
+1. [_Zizania palustris_ vs. _Oryza sativa_](#-Zizania-palustris-vs-Oryza-sativa)
+2. [_Zizania palustris_ vs. _Zizania latifolia_ (2015 version)](#-Zizania-palustris-vs-Zizania-latifolia-2015-version)
+3. [_Zizania palustris_ vs. _Zizania latifolia_ (2022 version)](#-Zizania-palustris-vs-Zizania-latifolia-2022-versionn)
 
 This tutorial is meant for members of the [Kimball Lab](https://wildricebreedingandgenetics.umn.edu/) at the University of Minnesota (Northern Wild Rice Conservation and Breeding) to understand how I made synteny plots using MCscan. The original tutorial by the author (Haibao Tang) can be found [here](https://github.com/tanghaibao/jcvi/wiki/MCscan-%28Python-version%29). This is an excellent resource (and is where I learned how to use the program). The tutorial given here is more focused on the needs of our program.
 
-## _Zizania palustris_ vs. _Oryza sativa_
+## _Zizania palustris_ vs _Oryza sativa_
 
 Depending on when you return to this tutorial, you may find that a script no longer works. When I came back to these scripts in January 2022 to put this tutorial together, the scripts (which previously worked) failed. The problem was that the system could not find the module files. The reason was that `module load python` was too generic. The default version became python 3.8 and I had installed the software under version 3.7. I fixed it by specifying `module load python3/3.7.4_anaconda2019.10` in the script. Once I did that, I had no issues whatsoever.
 
@@ -31,7 +31,7 @@ Here are some details about the [`layout`](helper_files/layout) file specificati
 When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1C_whitespace_cropped.png" width=700>
 
-## _Zizania palustris_ vs. _Zizania latifolia_ 2015 version
+## _Zizania palustris_ vs _Zizania latifolia_ 2015 version
 This figure was made using the 2015 version of the _Z. latifolia_ genome. You can find that paper [here](https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.12912) or using the following citation:<br><br>
 **Guo L., Qiu J., Han Z., Ye Z., Chen C., Liu C., Xin X., _et al._** (2015) A host plant genome (_Zizania latifolia_) after a century-long endophyte infection. _Plant J._ **83**, 600-609
 
@@ -44,7 +44,7 @@ Colors are specified in the `layout` file. We chose our color scheme after seeki
 When you're done, the finished figure should look like this:<br>
 <img src="images/Figure_1F_whitespace_cropped.png" width=700>
 
-## _Zizania palustris_ vs. _Zizania latifolia_ 2022 version
+## _Zizania palustris_ vs _Zizania latifolia_ 2022 version
 The first step is to convert the `GFF` file to `BAM` format:
 ```python
 python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
