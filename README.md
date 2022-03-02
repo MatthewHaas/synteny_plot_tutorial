@@ -52,7 +52,12 @@ wget https://download.cncb.ac.cn/gwh/Plants/Zizania_latifolia_Zlat_genome_v1_GWH
 **Note:** The `--ho-check-certificate` was added because the MSI system prompted me to add it.
 
 
-After retrieving the necessary data, the next step is to convert the `GFF` file to `BAM` format:
+After retrieving the necessary data, I converted (renamed) the `GFF` file to `GFF3` format. This is because I was having problems with the next steps (finding anchors) and thought this had something to do with it. The problem, I thought, was that the proper gene names (beginning with "Zla") were not being inserted into the `BED` file; instead, the gene names all began with "gene_" followed by some number. Ultimately, this did **not** resolve my issue, but since it fixed the problem of bizarre gene names being inserted into the `BED` file, I decided to leave it.
+```bash
+mv GWHBFHI00000000.gff.gz GWHBFHI00000000.gff3.gz
+```
+
+The next step is to convert the `GFF` file to `BAM` format:
 ```bash
 python -m jcvi.formats.gff bed GWHBFHI00000000.gff.gz -o latifolia_version_2.bed
 ```
