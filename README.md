@@ -72,5 +72,10 @@ In order to fix the `.cds` file, you will need to use the following sed one-line
 sed -i 's/^.*OriGeneID=/>/g' latifolia_version_2.cds
 ```
 
+Before making the karyotype figure, we need to change (simplify) the chromosome names in the _Z. latifolia_ `.bed` file:
+```bash
+sed -i 's/GWHBFHI00000001/Chr1/g' latifolia_version_2.bed
+```
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
