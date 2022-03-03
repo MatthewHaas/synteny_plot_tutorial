@@ -67,5 +67,10 @@ Next:
 python -m jcvi.formats.fasta format GWHBFHI00000000.CDS.fasta.gz latifolia_version_2.cds
 ```
 
+In order to fix the `.cds` file, you will need to use the following sed one-liner:
+```bash
+sed -i 's/^.*OriGeneID=/>/g' latifolia_version_2.cds
+```
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
