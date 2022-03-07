@@ -67,7 +67,7 @@ Next:
 python -m jcvi.formats.fasta format GWHBFHI00000000.CDS.fasta.gz latifolia_version_2.cds
 ```
 
-In order to fix the `.cds` file, you will need to use the following sed one-liner:
+The major roadblock in completing the analysis was that the primary gene names in the `.cds` file did not match up with the "Zla" gene names in the `.bed` file (or the "gene_" names for that matter). The "Zla" names were included further along in the `.cds` file headers so all that was needed to grab them was to remove a bunch of the extraneous information in the header of each gene. Once all of that was removed, the "Zla" gene names would be recognized as the primary gene name. In order to fix the `.cds` file, you will need to use the following sed one-liner:
 ```bash
 sed -i 's/^.*OriGeneID=/>/g' latifolia_version_2.cds
 ```
