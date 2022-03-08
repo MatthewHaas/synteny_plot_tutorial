@@ -76,5 +76,7 @@ Before making the karyotype figure, we need to change (simplify) the chromosome 
 sed -i 's/GWHBFHI00000001/Chr1/g' latifolia_version_2.bed
 ```
 
+<img src="images/karyotype_NWR_chr_ordered_according_to_synteny_with_Osativa.png" width=700>
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
