@@ -5,6 +5,7 @@ This tutorial is meant for members of the [Kimball Lab](https://wildricebreeding
 1. [_Zizania palustris_ vs. _Oryza sativa_](#Zizania-palustris-vs-Oryza-sativa)
 2. [_Zizania palustris_ vs. _Zizania latifolia_ (2015 version)](#Zizania-palustris-vs-Zizania-latifolia-2015-version)
 3. [_Zizania palustris_ vs. _Zizania latifolia_ (2022 version)](#Zizania-palustris-vs-Zizania-latifolia-2022-version)
+4. [Three species comparison](#Three-species-comparison)
 
 ## _Zizania palustris_ vs _Oryza sativa_
 
@@ -77,6 +78,27 @@ sed -i 's/GWHBFHI00000001/Chr1/g' latifolia_version_2.bed
 ```
 
 <img src="images/karyotype_NWR_chr_ordered_according_to_synteny_with_Osativa.png" width=700>
+
+## Three species comparison
+If we wanted to make another plot showing synteny between all three species (_Zizania palustris_, _Zizania latifolia_, and _Oryza sativa_), we only need to modify small aspects of the code we've already run. The `.bed` and `.cds` files already exist. The `layout` and `seqids` files only need slight modifications. To keep things clean, I created a new subdirectory to work in: `/home/jkimball/haasx092/other_synteny_figures/three_species_plot` and copied all of the relevant `.bed` and `.cds` files to this directory. I also copied the existing `layout` and `seqids` files to this directory before modifying them. The basic `layout` file looks like this:
+```bash
+#y, xstart, xend, rotation, color, label, va, bed, label_va
+0.8, 0.18, 0.98, 0, #235e39, \it Z. latifolia \space -, top, latifolia_version_2.bed, center
+0.6, 0.18, 0.98, 0, #4b0082, \it Z. palustris \space -, top, wild_rice.bed, center
+0.4, 0.18, 0.98, 0, #ff7f00, \it O. sativa \space -, top, oryza.bed, center
+# edges
+e, 0, 1, wild_rice.latifolia_version_2.anchors.simple
+e, 1, 2, wild_rice.oryza.anchors.simple
+```
+**Note:** The syntax for the labels are a little weird (for lack of a better word in my opinion). The `\it` aspect is LaTeX syntax for converting the text that follows it to italics (which is necessary for a Latin binomial) and the `\space` LaTeX syntax represents an attempt to add space after the species name because the text was running into the graphical representation of the first chromosome for each species. I'm not convinced that it was actually doing anything because even when I added 5 of these, I still had this problem. Other LaTeX solutions for adding spaces resulted in errors, but this completed without error so I left it in. Anyway, I think it was the inclusion of the hyphen (`-`) that actually soved my issue. It's also not really visible in the final figure unless you choose to rotate the position of the chromosomes. This is also why the genus names are not completely spelled out-to shorten the length of the name to avoid having it run into the graphical representation of the chromosomes. I did not previously have this issue, so I don't know why I am having it now-but I am. I also tried to play around with the `xstart` position, but that just resulted in the label running off the left side of the page.
+
+Now for the `seqids` file:
+```bash
+Chr1,Chr2,Chr3,Chr4,Chr5,Chr6,Chr7,Chr8,Chr9,Chr10,Chr11,Chr12,Chr13,Chr14,Chr15,Chr16,Chr17
+Chr1,Chr2,Chr3,Chr4,Chr5,Chr6,Chr7,Chr8,Chr9,Chr10,Chr11,Chr12,Chr13,Chr14,Chr15
+Chr1,Chr2,Chr3,Chr4,Chr5,Chr6,Chr7,Chr8,Chr9,Chr10,Chr11,Chr12
+```
+All this file really does is specify the chromosome labels for each species. The top line (track 0) represents _Zizania latifolia_, the middle line (track 1) represents _Zizania palustris_, and the third line (track 2) represents _Oryza sativa_. They can be in whichever order you like, but the `layout` and `seqids` files need to agree with each other.
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
