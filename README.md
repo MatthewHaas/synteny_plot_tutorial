@@ -6,6 +6,7 @@ This tutorial is meant for members of the [Kimball Lab](https://wildricebreeding
 2. [_Zizania palustris_ vs. _Zizania latifolia_ (2015 version)](#Zizania-palustris-vs-Zizania-latifolia-2015-version)
 3. [_Zizania palustris_ vs. _Zizania latifolia_ (2022 version)](#Zizania-palustris-vs-Zizania-latifolia-2022-version)
 4. [Three species comparison](#Three-species-comparison)
+5. [Microsynteny](#Microsynteny)
 
 ## _Zizania palustris_ vs _Oryza sativa_
 
