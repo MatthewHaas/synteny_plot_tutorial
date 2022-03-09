@@ -125,6 +125,11 @@ You can rotate whichever chromosome track you like by altering the the "rotation
 e, 0, 1, wild_rice.latifolia_version_2.anchors.simple
 e, 1, 2, wild_rice.oryza.anchors.simple
 ```
+After modifying the `layout` file, run the same one line of code as you did before:<br>
+```bash
+python -m jcvi.graphics.karyotype seqids layout --format png
+```
+
 Results in:<br>
 <img src="images/karyotype_3_species_tracks_rotated.png" width=700>
 
