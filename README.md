@@ -103,5 +103,19 @@ All this file really does is specify the chromosome labels for each species. The
 This "default" figure will  look like this:<br>
 <img src="images/karyotype_3_species_cscore=0.99_minspan=100.png" width=700>
 
+You can rotate whichever chromosome track you like by altering the the "rotation" parameter in the `layout` file:<br>
+```bash
+#y, xstart, xend, rotation, color, label, va, bed, label_va
+0.8, 0.18, 0.98, 15, #235e39, \it Z. latifolia \space -, top, latifolia_version_2.bed, center
+0.6, 0.18, 0.98, 0, #4b0082, \it Z. palustris \space -, top, wild_rice.bed, center
+0.4, 0.18, 0.98, -15, #ff7f00, \it O. sativa \space -, top, oryza.bed, center
+# edges
+e, 0, 1, wild_rice.latifolia_version_2.anchors.simple
+e, 1, 2, wild_rice.oryza.anchors.simple
+```
+Results in:<br>
+<img src="images/karyotype_3_species_tracks_rotated.png" width=700>
+
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
