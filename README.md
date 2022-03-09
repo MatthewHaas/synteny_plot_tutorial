@@ -116,6 +116,12 @@ e, 1, 2, wild_rice.oryza.anchors.simple
 Results in:<br>
 <img src="images/karyotype_3_species_tracks_rotated.png" width=700>
 
+If you would rather have straight lines showing connections between syntenic regions (rather than Bezier curves), simply add `--shadestyle=line` to the code that creates the figure.
+```bash
+python -m jcvi.graphics.karyotype seqids layout --format png --shadestyle=line
+```
+Results in:<br>
+<img src="images/karyotype_tracks_rotated_straight_lines.png" width=700>
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
