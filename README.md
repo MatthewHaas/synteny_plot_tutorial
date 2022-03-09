@@ -100,6 +100,17 @@ Chr1,Chr2,Chr3,Chr4,Chr5,Chr6,Chr7,Chr8,Chr9,Chr10,Chr11,Chr12
 ```
 All this file really does is specify the chromosome labels for each species. The top line (track 0) represents _Zizania latifolia_, the middle line (track 1) represents _Zizania palustris_, and the third line (track 2) represents _Oryza sativa_. They can be in whichever order you like, but the `layout` and `seqids` files need to agree with each other.
 
+**Note:** Since we are reusing exising files (because why reinvent the wheel?), you might forget that you need to load the required programs. So, remember to load all of the necessary programs before you try to run any code :smiley:<br>
+```bash
+export PATH=$PATH:/home/jkimball/haasx092/synteny_figure/last-1060/src
+export PATH=$PATH:/home/jkimball/haasx092/synteny_figure/install-tl-20200505/1/bin/x86_64-linux
+
+module load python
+```
+Then, all you need to run is:<br>
+```bash
+python -m jcvi.graphics.karyotype seqids layout --format png
+```
 This "default" figure will  look like this:<br>
 <img src="images/karyotype_3_species_cscore=0.99_minspan=100.png" width=700>
 
