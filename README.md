@@ -6,7 +6,8 @@ This tutorial is meant for members of the [Kimball Lab](https://wildricebreeding
 2. [_Zizania palustris_ vs. _Zizania latifolia_ (2015 version)](#Zizania-palustris-vs-Zizania-latifolia-2015-version)
 3. [_Zizania palustris_ vs. _Zizania latifolia_ (2022 version)](#Zizania-palustris-vs-Zizania-latifolia-2022-version)
 4. [Three species comparison](#Three-species-comparison)
-5. [Microsynteny](#Microsynteny)
+5. [Coloring specific links](#Coloring-specific-links)
+6. [Microsynteny](#Microsynteny)
 
 ## _Zizania palustris_ vs _Oryza sativa_
 
@@ -139,6 +140,9 @@ python -m jcvi.graphics.karyotype seqids layout --format png --shadestyle=line
 ```
 Results in:<br>
 <img src="images/karyotype_tracks_rotated_straight_lines.png" width=700>
+
+## Coloring specific links
+At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s).
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
