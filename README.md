@@ -164,5 +164,8 @@ FUN_003593      FUN_003761      LOC_Os08g03240  LOC_Os08g06640  213     +
 FUN_003768      FUN_003798      LOC_Os08g07400  LOC_Os08g08210  46      +
 ```
 
+Using the complete version of the above `.simple` file will result in the following figure:<br>
+<img src="images/karyotype_colored_by_osativa_chr1.png" width=700>
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
