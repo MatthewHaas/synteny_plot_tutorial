@@ -144,5 +144,25 @@ Results in:<br>
 ## Coloring specific links
 At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s).
 
+You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like green ("g"), or blue ("b"). Unfortunately, I do not think it is possible to customize the colors as much as you can with the chromosomes/chromosome labels.
+```bash
+FUN_001229      FUN_001281      LOC_Os09g27940  LOC_Os09g28560  52      -
+FUN_001289      FUN_001454      LOC_Os09g24540  LOC_Os09g27590  205     -
+FUN_001457      FUN_001632      LOC_Os09g36140  LOC_Os09g39870  247     -
+FUN_001647      FUN_001719      LOC_Os09g33510  LOC_Os09g36040  103     -
+FUN_002470      FUN_002503      r*LOC_Os01g39890  LOC_Os01g40700  48      -
+FUN_002506      FUN_002599      r*LOC_Os01g36070        LOC_Os01g39630  146     -
+FUN_002675      FUN_002796      r*LOC_Os01g16090        LOC_Os01g19970  173     +
+FUN_002804      FUN_002841      r*LOC_Os01g20970        LOC_Os01g22954  66      +
+FUN_002883      FUN_002979      r*LOC_Os01g13100        LOC_Os01g15290  130     +
+FUN_002984      FUN_003152      r*LOC_Os01g09890        LOC_Os01g13040  212     +
+FUN_003189      FUN_003284      r*LOC_Os01g07810        LOC_Os01g09770  127     +
+FUN_003318      FUN_003365      r*LOC_Os01g05430        LOC_Os01g06640  71      -
+FUN_003391      FUN_003453      r*LOC_Os01g01890        LOC_Os01g03980  103     +
+FUN_003488      FUN_003588      LOC_Os08g01054  LOC_Os08g02860  127     +
+FUN_003593      FUN_003761      LOC_Os08g03240  LOC_Os08g06640  213     +
+FUN_003768      FUN_003798      LOC_Os08g07400  LOC_Os08g08210  46      +
+```
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
