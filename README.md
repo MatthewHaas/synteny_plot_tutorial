@@ -144,7 +144,7 @@ Results in:<br>
 ## Coloring specific links
 At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s).
 
-You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like green ("g"), or blue ("b"). Unfortunately, I do not think it is possible to customize the colors as much as you can with the chromosomes/chromosome labels.
+You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like green ("g"), or blue ("b"). You can also specify any color you want using its HEX code. More on that below.
 ```bash
 FUN_001229      FUN_001281      LOC_Os09g27940  LOC_Os09g28560  52      -
 FUN_001289      FUN_001454      LOC_Os09g24540  LOC_Os09g27590  205     -
@@ -166,6 +166,32 @@ FUN_003768      FUN_003798      LOC_Os08g07400  LOC_Os08g08210  46      +
 
 Using the complete version of the above `.simple` file will result in the following figure:<br>
 <img src="images/karyotype_colored_by_osativa_chr1.png" width=700>
+
+Using HEX codes, the `.simple` file would look something like this:
+```bash
+FUN_014647      FUN_014795      LOC_Os05g50490  LOC_Os05g51860  132     -
+FUN_014851      FUN_014891      LOC_Os05g49580  LOC_Os05g50130  47      -
+FUN_015145      FUN_015178      LOC_Os02g42406  LOC_Os02g42850  34      -
+#235e39*FUN_015215      FUN_015367      LOC_Os01g39770  LOC_Os01g42820  195     -
+#235e39*FUN_015373      FUN_015488      LOC_Os01g36580  LOC_Os01g39380  146     -
+#235e39*FUN_015503      FUN_015653      LOC_Os01g31110  LOC_Os01g35230  196     -
+#235e39*FUN_015708      FUN_015846      LOC_Os01g18420  LOC_Os01g21440  158     +
+#235e39*FUN_015892      FUN_016018      LOC_Os01g22336  LOC_Os01g25600  162     +
+FUN_016056      FUN_016149      LOC_Os01g15470  LOC_Os01g16230  75      +
+#235e39*FUN_016190      FUN_016243      LOC_Os01g14310  LOC_Os01g14870  50      -
+#235e39*FUN_016235      FUN_016350      LOC_Os01g16240  LOC_Os01g18100  109     -
+#235e39*FUN_016439      FUN_016539      LOC_Os01g09590  LOC_Os01g10520  92      +
+#235e39*FUN_016564      FUN_016713      LOC_Os01g10680  LOC_Os01g12690  162     +
+#235e39*FUN_016715      FUN_016919      LOC_Os01g07080  LOC_Os01g08860  181     -
+#235e39*FUN_016923      FUN_017105      LOC_Os01g02860  LOC_Os01g06836  243     -
+#235e39*FUN_017109      FUN_017164      LOC_Os01g01010  LOC_Os01g02200  76      -
+#235e39*FUN_017179      FUN_018308      LOC_Os01g58080  LOC_Os01g74570  1230    -
+#235e39*FUN_018309      FUN_019085      LOC_Os01g45140  LOC_Os01g57940  894     -
+#235e39*FUN_019090      FUN_019163      LOC_Os01g42840  LOC_Os01g44360  95      -
+FUN_019632      FUN_019675      LOC_Os04g08060  LOC_Os04g09260  50      -
+FUN_019707      FUN_019766      LOC_Os04g01070  LOC_Os04g03100  88      - 
+```
+**Note:** I used `#235e39` because I think it is a particularly pretty shade of green. `#235e39` = ![#ff7f00](https://via.placeholder.com/15/235e39/000000?text=+)
 
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
