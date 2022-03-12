@@ -193,5 +193,7 @@ FUN_019707      FUN_019766      LOC_Os04g01070  LOC_Os04g03100  88      -
 ```
 **Note:** I used `#235e39` because I think it is a particularly pretty shade of green. `#235e39` = ![#ff7f00](https://via.placeholder.com/15/235e39/000000?text=+)
 
+You can also choose to use any legal HTML color that you like (e.g., "burlywood" or "chartreuse").
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
