@@ -195,5 +195,32 @@ FUN_019707      FUN_019766      LOC_Os04g01070  LOC_Os04g03100  88      -
 
 You can also choose to use any legal HTML color that you like (e.g., "burlywood" or "chartreuse").
 
+In addition to color, you can choose various shades of grey by specifying a number between 0 and 1 (e.g., 0.5 as in the example below).
+```bash
+FUN_014647      FUN_014795      LOC_Os05g50490  LOC_Os05g51860  132     -
+FUN_014851      FUN_014891      LOC_Os05g49580  LOC_Os05g50130  47      -
+FUN_015145      FUN_015178      LOC_Os02g42406  LOC_Os02g42850  34      -
+0.5*FUN_015215      FUN_015367      LOC_Os01g39770  LOC_Os01g42820  195     -
+0.5*FUN_015373      FUN_015488      LOC_Os01g36580  LOC_Os01g39380  146     -
+0.5*FUN_015503      FUN_015653      LOC_Os01g31110  LOC_Os01g35230  196     -
+0.5*FUN_015708      FUN_015846      LOC_Os01g18420  LOC_Os01g21440  158     +
+0.5*FUN_015892      FUN_016018      LOC_Os01g22336  LOC_Os01g25600  162     +
+0.5*FUN_016056      FUN_016149      LOC_Os01g15470  LOC_Os01g16230  75      +
+0.5*FUN_016190      FUN_016243      LOC_Os01g14310  LOC_Os01g14870  50      -
+0.5*FUN_016235      FUN_016350      LOC_Os01g16240  LOC_Os01g18100  109     -
+0.5*FUN_016439      FUN_016539      LOC_Os01g09590  LOC_Os01g10520  92      +
+0.5*FUN_016564      FUN_016713      LOC_Os01g10680  LOC_Os01g12690  162     +
+0.5*FUN_016715      FUN_016919      LOC_Os01g07080  LOC_Os01g08860  181     -
+0.5*FUN_016923      FUN_017105      LOC_Os01g02860  LOC_Os01g06836  243     -
+0.5*FUN_017109      FUN_017164      LOC_Os01g01010  LOC_Os01g02200  76      -
+0.5*FUN_017179      FUN_018308      LOC_Os01g58080  LOC_Os01g74570  1230    -
+0.5*FUN_018309      FUN_019085      LOC_Os01g45140  LOC_Os01g57940  894     -
+0.5*FUN_019090      FUN_019163      LOC_Os01g42840  LOC_Os01g44360  95      -
+FUN_019632      FUN_019675      LOC_Os04g08060  LOC_Os04g09260  50      -
+FUN_019707      FUN_019766      LOC_Os04g01070  LOC_Os04g03100  88      - 
+```
+
+<img src="images/karyotype_greyscale.png" width=700>
+
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
