@@ -144,7 +144,7 @@ Results in:<br>
 ## Coloring specific links
 At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s).
 
-You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like green ("g"), or blue ("b"). You can also specify any color you want using its HEX code. More on that below.
+You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like blue (b), green (g), cyan (c), magenta (m), yellow (y), black (k), or white (w). You can also specify any color you want using its HEX code. More on that below.
 ```bash
 FUN_001229      FUN_001281      LOC_Os09g27940  LOC_Os09g28560  52      -
 FUN_001289      FUN_001454      LOC_Os09g24540  LOC_Os09g27590  205     -
@@ -177,7 +177,7 @@ FUN_015145      FUN_015178      LOC_Os02g42406  LOC_Os02g42850  34      -
 #235e39*FUN_015503      FUN_015653      LOC_Os01g31110  LOC_Os01g35230  196     -
 #235e39*FUN_015708      FUN_015846      LOC_Os01g18420  LOC_Os01g21440  158     +
 #235e39*FUN_015892      FUN_016018      LOC_Os01g22336  LOC_Os01g25600  162     +
-FUN_016056      FUN_016149      LOC_Os01g15470  LOC_Os01g16230  75      +
+#235e39*FUN_016056      FUN_016149      LOC_Os01g15470  LOC_Os01g16230  75      +
 #235e39*FUN_016190      FUN_016243      LOC_Os01g14310  LOC_Os01g14870  50      -
 #235e39*FUN_016235      FUN_016350      LOC_Os01g16240  LOC_Os01g18100  109     -
 #235e39*FUN_016439      FUN_016539      LOC_Os01g09590  LOC_Os01g10520  92      +
