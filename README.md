@@ -142,7 +142,7 @@ Results in:<br>
 <img src="images/karyotype_tracks_rotated_straight_lines.png" width=700>
 
 ## Coloring specific links
-At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s).
+At some point, you may want to add color between links to draw your audience's attention to one or a few specific links. You can do this by making small edits to the `.simple` file(s). Also just for the record, the default grey is called "gainsboro" in the python named color universe. (I didn't know where else to mention this or if anyone would care, but I found it while investigating how the `karyotype.py` script works, so I thought I would mention it.
 
 You add color by adding `r*` before the genes that you want to highlight. Below is a _sample excerpt_ from a `.simple` file. I am not including a full `.simple` file in this `README` document because it would take up unnecessary space and I think this gets the point across. The "r" will make it red. If you want, you can pick other colors like blue (b), green (g), cyan (c), magenta (m), yellow (y), black (k), or white (w). You can also specify any color you want using its HEX code. More on that below.
 ```bash
