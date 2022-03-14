@@ -81,6 +81,8 @@ sed -i 's/GWHBFHI00000001/Chr1/g' latifolia_version_2.bed
 
 <img src="images/karyotype_NWR_chr_ordered_according_to_synteny_with_Osativa.png" width=700>
 
+**Note:** Regarding the order of the _Zizania latifolia_ chromsome order: the authors assigned chromosome numbers based on size in decreasing order. This explains why our chromosome numbers do not match up despite the close evolutionary relationship of _Zizania latifolia_ and _Zizania palustris_. We assigned our chromosome numbers based on their synteny with _Oryza sativa_. At the time of our publication, the updated _Zizania latifolia_ genome was not available.
+
 ## Three species comparison
 If we wanted to make another plot showing synteny between all three species (_Zizania palustris_, _Zizania latifolia_, and _Oryza sativa_), we only need to modify small aspects of the code we've already run. The `.bed` and `.cds` files already exist. The `layout` and `seqids` files only need slight modifications. To keep things clean, I created a new subdirectory to work in: `/home/jkimball/haasx092/other_synteny_figures/three_species_plot` and copied all of the relevant `.bed` and `.cds` files to this directory. I also copied the existing `layout` and `seqids` files to this directory before modifying them. The basic `layout` file looks like this:
 ```bash
