@@ -233,3 +233,6 @@ I think the thing that is key here is that the parameters expect strings as inpu
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
 
 ## Claudia microsynteny
+
+After the first attempt at generating this figure, the image looks like this:<br>
+<img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
