@@ -8,7 +8,7 @@ This tutorial is meant for members of the [Kimball Lab](https://wildricebreeding
 4. [Three species comparison](#Three-species-comparison)
 5. [Coloring specific links](#Coloring-specific-links)
 6. [Microsynteny](#Microsynteny)
-7. [Claudia's microsynteny](#Claudia/'s-microsynteny)
+7. [Claudia microsynteny](#Claudia-microsynteny)
 
 ## _Zizania palustris_ vs _Oryza sativa_
 
@@ -232,4 +232,4 @@ I think the thing that is key here is that the parameters expect strings as inpu
 ## Microsynteny
 In some cases, you may want to look at a specific region more closely, such as the one surrounding the _shattering4_ (_sh4_) gene.
 
-## Claudia's microsynteny
+## Claudia microsynteny
