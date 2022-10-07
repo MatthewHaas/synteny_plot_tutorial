@@ -8,7 +8,7 @@ This tutorial is meant for members of the [Kimball Lab](https://wildricebreeding
 4. [Three species comparison](#Three-species-comparison)
 5. [Coloring specific links](#Coloring-specific-links)
 6. [Microsynteny](#Microsynteny)
-7. [Claudia's microsynteny](#Claudia's-microsynteny)
+7. [Claudia's microsynteny](#Claudia/'s-microsynteny)
 
 ## _Zizania palustris_ vs _Oryza sativa_
 
