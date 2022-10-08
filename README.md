@@ -236,3 +236,5 @@ In some cases, you may want to look at a specific region more closely, such as t
 
 After the first attempt at generating this figure, the image looks like this:<br>
 <img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
+
+**Note:** The output of the MCscan code is a PDF file. Before uploading it here, I first converted it to PNG format (as I do for all of my GitHub images), but I also cropped out excess whitespace because there is often excess whitespace around MCscan figures (especially the karyotype figures like this one).
