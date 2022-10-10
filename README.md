@@ -238,3 +238,11 @@ After the first attempt at generating this figure, the image looks like this:<br
 <img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
 
 **Note:** The output of the MCscan code is a PDF file. Before uploading it here, I first converted it to PNG format (as I do for all of my GitHub images), but I also cropped out excess whitespace because there is often excess whitespace around MCscan figures (especially the karyotype figures like this one).
+
+Filtering the `bed` file:
+
+```bash
+awk '$4~/^Zla08/' 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
+awk '$1~/Chr6/ && $4~/^FUN/' 3species_micro-collinearity.bed 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
+awk '$4~/^LOC_Os02/' 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
+```
