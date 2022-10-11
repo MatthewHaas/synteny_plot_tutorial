@@ -234,6 +234,10 @@ In some cases, you may want to look at a specific region more closely, such as t
 
 ## Claudia microsynteny
 
+The purpose of this project was to visualize a cluster of genes involved in phytoalexin synthesis in NWR. Claudia created a nice PowerPoint presentation including a comparative genomics slide looking at microsynteny between _Zizania palustris_, _Zizania latifolia_, and _Oryza sativa_. The genomic interval of interest was on _Zizania palustris_ chromosome 6 (ZPchr0006) between 33,535,817 bp and 33,594,019  bp. 
+
+I identified several genes in this interval (FUN_030362, FUN_030363, FUN_030364, novel_gene_1089_5e3b9126, novel_gene_140_5e3b9126, FUN_030365, FUN_030366, FUN_030367, FUN_030368). In order to identify which genes from the other species correspond to these NWR genes, I had to search the pre-existing anchor files. These are MC-scan specific files that show homologous genes. This is how I created (manually) the helper text file `claudia_blocks_ordered`.
+
 After the first attempt at generating this figure, the image looks like this:<br>
 <img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
 
