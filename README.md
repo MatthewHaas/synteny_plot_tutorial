@@ -274,3 +274,19 @@ python -m jcvi.graphics.synteny claudia_blocks_ordered 3species_micro-collineari
 
 Now, the figure looks like this:<br>
 <img src="images/claudia_blocks_ordered_with_names_genes_colored_by_homology.png" width="500">
+
+Now that some of the bigger issues with the figure have been addressed, it is time to figure out how to italicize the species names (to fit with convention). Simplly adding `\it` in front of each species name (and removing the `\` after the genus names is enough to do achieve this.
+
+The `blocks.layout` file should now look like this:<br>
+```bash
+# x, y, rotation, ha, va, color, ratio, label, chr
+0.6, 0.8, 0, left, center, #235e39, 1, \it Zizania latifolia, chr08
+0.6, 0.6, 0, left, center, #4b0082, 1, \it Zizania palustris,  chr06
+0.6, 0.4, 0, left, center, #ff7f00, 1, \it Oryza sativa, chr02
+# edges
+e, 0, 1
+e, 1, 2
+```
+
+Now, the figure looks like this:<br>
+<img src="images/claudia_blocks_ordered_genes_colored_italic_names.png" width="500">
