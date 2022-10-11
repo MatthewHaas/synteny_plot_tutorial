@@ -290,3 +290,19 @@ e, 1, 2
 
 Now, the figure looks like this:<br>
 <img src="images/claudia_blocks_ordered_genes_colored_italic_names.png" width="500">
+
+If you want to change the color of the species names to black, that's also very easy to do. The HEX codes usesd so far in the `blocks.layout` file were used to match the colors used to represent each species in the [genome paper](https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.15419) for consistency.
+
+The `blocks.layout` file will look like this:<br>
+```bash
+# x, y, rotation, ha, va, color, ratio, label, chr
+0.6, 0.8, 0, left, center, black, 1, \it Zizania latifolia, chr08
+0.6, 0.6, 0, left, center, black, 1, \it Zizania palustris,  chr06
+0.6, 0.4, 0, left, center, black, 1, \it Oryza sativa, chr02
+# edges
+e, 0, 1
+e, 1, 2
+```
+
+Now, the figure will look like this:<br>
+<img src="images/claudia_blocks_ordered_with_names_genes_colored_by_homology_species_names_black_font.png" width="500">
