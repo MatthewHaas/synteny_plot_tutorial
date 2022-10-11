@@ -237,7 +237,7 @@ In some cases, you may want to look at a specific region more closely, such as t
 After the first attempt at generating this figure, the image looks like this:<br>
 <img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
 
-**Note:** The output of the MCscan code is a PDF file. Before uploading it here, I first converted it to PNG format (as I do for all of my GitHub images), but I also cropped out excess whitespace because there is often excess whitespace around MCscan figures (especially the karyotype figures like this one).
+**Note:** The output of the MCscan code is a PDF file. Before uploading it here, I first converted it to PNG format (as I do for all of my GitHub images), but I also cropped out excess whitespace because there is often excess whitespace around MCscan figures (especially the karyotype figures like this one). Also for this reason, some of the example figures shown below might look like they are different sizes. This is because when I cropped out the excess white space, I didn't pay super close attention to ensuring that I cropped out exactly the same amount of white space each time. I figured it isn't really necessary for purposes of this tutorial (vs. preparing a figure for publication in a manuscript).
 
 Filtering the `bed` file:
 
