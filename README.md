@@ -242,7 +242,7 @@ In order to get the coordinates for each gene, you'll need to use a `bed` file. 
 ```bash
 cat latifolia_version_2.bed wild_rice_oryza.bed > 3species_micro-collinearity_copy.bed
 ```
-**Note:** The file `wild_rice_oryza.bed` already existed and was in the correct order (_Zizania palustris_ then _Oryza sativa_). If that _wasn't_ the case, you would need to concatenate the individual files (separately) in the order that you want them to appear in the `bed` file.
+**Note:** The file `wild_rice_oryza.bed` already existed and was in the correct order (_Zizania palustris_ then _Oryza sativa_). If that _wasn't_ the case, you would need to concatenate the individual files (`latifolia_version_2.bed`, `wild_rice.bed`, and `oryza.bed`) in the order that you want them to appear in the `bed` file.
 
 One thing to pay attention to is that **the species in the bed file must occur in the order that you want them to appear in the figure**.
 
