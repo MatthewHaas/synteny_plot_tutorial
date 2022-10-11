@@ -238,10 +238,22 @@ The purpose of this project was to visualize a cluster of genes involved in phyt
 
 I identified several genes in this interval (FUN_030362, FUN_030363, FUN_030364, novel_gene_1089_5e3b9126, novel_gene_140_5e3b9126, FUN_030365, FUN_030366, FUN_030367, FUN_030368). In order to identify which genes from the other species correspond to these NWR genes, I had to search the pre-existing anchor files. These are MC-scan specific files that show homologous genes. This is how I created (manually) the helper text file `claudia_blocks_ordered`.
 
+In order to get the coordinates for each gene, you'll need to use a `bed` file. I created the file `3species_micro-collinearity_copy.bed` by concatenating the component species' `bed` files:<br>
+```bash
+cat latifolia_version_2.bed wild_rice_oryza.bed > 3species_micro-collinearity_copy.bed
+```
+**Note:** The file `wild_rice_oryza.bed` already existed and was in the correct order (_Zizania palustris_ then _Oryza sativa_). If that _wasn't_ the case, you would need to concatenate the individual files (separately) in the order that you want them to appear in the `bed` file.
+
+One thing to pay attention to is that **the species in the bed file must occur in the order that you want them to appear in the figure**.
+
 After the first attempt at generating this figure, the image looks like this:<br>
 <img src="images/claudia_blocks_ordered_with_gene_names.png" width="500">
 
 **Note:** The output of the MCscan code is a PDF file. Before uploading it here, I first converted it to PNG format (as I do for all of my GitHub images), but I also cropped out excess whitespace because there is often excess whitespace around MCscan figures (especially the karyotype figures like this one). Also for this reason, some of the example figures shown below might look like they are different sizes. This is because when I cropped out the excess white space, I didn't pay super close attention to ensuring that I cropped out exactly the same amount of white space each time. I figured it isn't really necessary for purposes of this tutorial (vs. preparing a figure for publication in a manuscript).
+
+In the initial figure, you'll notice that the _Zizania latifolia_ and _Oryza sativa_ chromosomes have gene names from other species overlapping with gene names from the appropriate species. **This should not happen**. I think the reason this happened is because MCscan was pulling information about which chromosomes to use from the `blocks.layout` file. Because both _Zizania latifolia_ and _Oryza sativa_ have similar genomic intervals (22.55-22.62 Mb and 21.66-21.86 Mb, respectively) despite being on different chromosomes (Chr08 and Chr02, respectively), MCscan pulled information from _Oryza sativa_ chromosome 8 in the `bed` file and plotted it along _Zizania latifolia_ chromosome 8 genes. It did the same with _Zizania latifolia_ chromosome 2 genes--plotting them alongside _Oryza sativa_ chromosome 2 genes. The _Zizania palustris_ chromosome 6 did not plot gene names from either of the other species because its interval (33.54-33.59 Mb) must not have any genes in the `bed` file from those species.
+
+I thought that filtering out all of the unused/irrelevant information from the `bed` file would solve this problem. After trying it to see if I was right, I found that I was indeed right, so I will describe the steps that I took to achieve this next.
 
 Filtering the `bed` file:
 
