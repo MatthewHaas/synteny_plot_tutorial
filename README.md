@@ -247,3 +247,22 @@ awk '$1~/Chr6/ && $4~/^FUN/' 3species_micro-collinearity.bed 3species_micro-coll
 awk '$4~/^LOC_Os02/' 3species_micro-collinearity.bed >> 3species_micro-collinearity_filtered.bed
 ```
 **Note:** I used the `>>` symbol so I could iteratively add (append) selections for each specific species/chromosome pair without overwriting the previous work, which would have happened if I used the `>` symbol (writes the "standard output" from a Unix command to a file). Here's the logic of the AWK code: Field 4 (`$4`) in the `bed` file contains the gene names and both the _Zizania latifolia_ and _Oryza sativa_ gene names indicate both species (e.g.,"Zla" or "LOC_Os") and chromosome number (e.g., "08" or "02"), so I was able to select on both factors simultaneously. Because the gene names for _Zizania palustris_ are the original gene names from the [FUNannotate pipeline](https://funannotate.readthedocs.io/en/latest/tutorials.html), they have the prefix "FUN" and so do not contain any reference to species _or_ chromosome number. This is why I also had to select the first field/column (`$1`) to select for the chromosome that we wanted.
+
+There was another change that I had to make to improve upon the initial figure. In the initial figure, you'll notice that the links go from the _Zizania latifolia_ chromosome directly to that of _Oryza sativa_. There are no links from _Zizania palustris_ to _Oryza sativa_. That's because in the initial `blocks.layout` file, I the line `e, 0, 1` repeated twice under `#edges`. Changing the second line to `e, 1, 2` fixed this. Here is an excerpt from the MCscan tutorial:<br>
+>Like the layout file in the macro-synteny section, edges stanza say connecting grape (column 0) with peach (column 1) and grape (column 0) with cacao (column 2).
+
+That figure has one chromosome (grape) on top and two chromsomes (peach and cacao) next to each other on the . In any case, I think you should interpret the `blocks.layout` file shown below as "connect _Zizania latifolia_ to _Zizania palustris_ (e.g., 0,1) and connect _Zizania palustris_ to _Oryza sativa_ (e.g., 1,2)."
+
+The top three lines (apart from the header line) indicate where the chromosome lines themselves are oriented. I think the x-axis value (0.6) for all ends up being the center of the chromosome while the y-axis values (0.8, 0.6, and 0.4) orient the chromosomes vertically. I set horizontal alignment ("ha") to be "left", but I think the lengths of some of the chromosomes (especially _Oryza sativa_) impact this in practice.
+
+The `blocks.layout` file should look like this:<br>
+```bash
+# x, y, rotation, ha, va, color, ratio, label, chr
+0.6, 0.8, 0, left, center, #235e39, 1, Zizania\ latifolia, chr08
+0.6, 0.6, 0, left, center, #4b0082, 1, Zizania\ palustris,  chr06
+0.6, 0.4, 0, left, center, #ff7f00, 1, Oryza\ sativa, chr02
+# edges
+e, 0, 1
+e, 1, 2
+```
+(The species names are currently not in italics like I think they should be, but that's a problem for another day.)
