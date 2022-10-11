@@ -242,7 +242,8 @@ After the first attempt at generating this figure, the image looks like this:<br
 Filtering the `bed` file:
 
 ```bash
-awk '$4~/^Zla08/' 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
-awk '$1~/Chr6/ && $4~/^FUN/' 3species_micro-collinearity.bed 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
-awk '$4~/^LOC_Os02/' 3species_micro-collinearity.bed >> 3_species_micro-collinearity_filtered.bed
+awk '$4~/^Zla08/' 3species_micro-collinearity.bed >> 3species_micro-collinearity_filtered.bed
+awk '$1~/Chr6/ && $4~/^FUN/' 3species_micro-collinearity.bed 3species_micro-collinearity.bed >> 3species_micro-collinearity_filtered.bed
+awk '$4~/^LOC_Os02/' 3species_micro-collinearity.bed >> 3species_micro-collinearity_filtered.bed
 ```
+**Note:** I used the `>>` symbol so I could iteratively add (append) selections for each specific species/chromosome pair without overwriting the previous work, which would have happened if I used the `>` symbol (writes the "standard output" from a Unix command to a file). Here's the logic of the AWK code: Field 4 (`$4`) in the `bed` file contains the gene names and both the _Zizania latifolia_ and _Oryza sativa_ gene names indicate both species (e.g.,"Zla" or "LOC_Os") and chromosome number (e.g., "08" or "02"), so I was able to select on both factors simultaneously. Because the gene names for _Zizania palustris_ are the original gene names from the [FUNannotate pipeline](https://funannotate.readthedocs.io/en/latest/tutorials.html), they have the prefix "FUN" and so do not contain any reference to species _or_ chromosome number. This is why I also had to select the first field/column (`$1`) to select for the chromosome that we wanted.
