@@ -266,3 +266,11 @@ e, 0, 1
 e, 1, 2
 ```
 (The species names are currently not in italics like I think they should be, but that's a problem for another day.)
+
+Another thing that we might want to do is change the color of the genes to show homology between species. The default colors are blue and green which I think represent the strand that the gene is on. In order to change the color of the genes, we simply add `--glyphcolor=orthogroup` to the script so that it now looks like this:<br>
+```bash
+python -m jcvi.graphics.synteny claudia_blocks_ordered 3species_micro-collinearity_filtered.bed blocks.layout --genelabelsize=5 --glyphcolor=orthogroup
+```
+
+Now, the figure looks like this:<br>
+<img src="images/claudia_blocks_ordered_with_names_genes_colored_by_homology.png" width="500">
