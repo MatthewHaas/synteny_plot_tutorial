@@ -358,3 +358,17 @@ python -m jcvi.graphics.synteny claudia_blocks_ordered_ZP_names 3species_micro-c
 ```
 
 <img src="images/claudia_blocks_ordered_ZP_names.png" width="500">
+
+Another thing (maybe the last thing?) to do to improve the figure is to add the chromosome number next to the species name. This is easy enough to achieve. For example, all you need to do is add "Chr08" after _Zizania latifolia_ or "Chr06" after _Zizania palustris_ in the `blocks.layout` file. However, the font is still italicized and I think it would look better if the chromosome label were in standard font. The way to achieve this is to add `\normalfont` after the species name, but before the chromosome number. So now your `blocks.layout` file should look like this:<br>
+```bash
+# x, y, rotation, ha, va, color, ratio, label, chr
+0.6, 0.8, 0, left, center, black, 1, \it Zizania latifolia \normalfont Chr08, chr08
+0.6, 0.6, 0, left, center, black, 1, \it Zizania palustris \normalfont Chr06,  chr06
+0.6, 0.4, 0, left, center, black, 1, \it Oryza sativa \normalfont Chr02, chr02
+# edges
+e, 0, 1
+e, 1, 2
+```
+
+And the figure should look like:<br>
+<img src="images/claudia_blocks_ordered_ZP_names_with_chr.png" width="500">
