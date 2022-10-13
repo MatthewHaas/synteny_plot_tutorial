@@ -327,3 +327,34 @@ e, 1, 2
 
 Now, the figure will look like this:<br>
 <img src="images/claudia_blocks_ordered_with_names_genes_colored_by_homology_species_names_black_font.png" width="500">
+
+Another issue with the figure is that it still uses the "FUN" gene names that were the original gene names from the FUNannotate pipeline. We've since adopted a "ZPchrXXXX" nomenclature. This wasn't done for a variety of reasons and the nuances might be too detailed to mention here, but the steps to change the names in the figure are simple.
+
+The gene names need to be switched in two file:
+`claudia_blocks_ordered` and
+`3species_micro-collinearity_filtered.bed`
+
+I made a copy of `claudia_blocks_ordered` and named it `claudia_blocks_ordered_ZP_names`. I manually edited this file with `vi` because it is so small. There's only 10 gene names that needed to be switched. I looked up the "FUN" gene names in the file `201003_updated_annotation_file.csv` in Excel and used the corresponding "ZP" gene to replace the "FUN" gene in `claudia_blocks_ordered_ZP_names`. So, `FUN_030362` became `ZPchr0006g40673`, `FUN_030363` became `ZPchr0006g45140`, and so forth. One thing to note is that the "ZP" genes are not in the same numeric order as the "FUN" genes. I'm not sure why, but I don't think it matters that much. Probably just an artefact of how the gene names were changed.
+
+Editing the `bed` file is a bit trickier since it is so much larger. It also contains far more genes than we actually need to change. The file `claudia_blocks_ordered_ZP_names` basically tells MCscan which genes we are interested in looking at while the `bed` file has the coordinates that are important for mapping. So, we only really need to change the "FUN" gene names that appear in the file `claudia_blocks_ordered_ZP_names`.
+
+To achieve this, I used the following code on the command line:<br>
+```bash
+sed -i 's/FUN_030362/ZPchr0006g40673/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030363/ZPchr0006g45140/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030364/ZPchr0006g41229/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/novel_gene_1089_5e3b9126/ZPchr0006g45307/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/novel_gene_140_5e3b9126/ZPchr0006g43296/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030365/ZPchr0006g43754/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030366/ZPchr0006g43762/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030367/ZPchr0006g43262/g' 3species_micro-collinearity_filtered_copy.bed
+sed -i 's/FUN_030368/ZPchr0006g43948/g' 3species_micro-collinearity_filtered_copy.bed
+```
+This will do a search-and-replace for the "FUN" genes and replace them with their "ZP" gene equivalent.
+
+Now when we run MCscan, we can use these slightly altered files and we will get the same figure as above, but with "ZP" names:<br>
+```bash
+python -m jcvi.graphics.synteny claudia_blocks_ordered_ZP_names 3species_micro-collinearity_filtered_copy.bed blocks.layout --genelabelsize=5 --glyphcolor=orthogroup
+```
+
+<img src="images/claudia_blocks_ordered_ZP_names.png" width="500">
