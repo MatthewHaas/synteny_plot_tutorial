@@ -372,3 +372,30 @@ e, 1, 2
 
 And the figure should look like:<br>
 <img src="images/claudia_blocks_ordered_ZP_names_with_chr.png" width="500">
+
+Ok, so Claudia would ideally like the chromosome label on the same line at the genomic interval (given in Mb). Theoretically, this should be possible but it would require edited the source code (like I've done for a few different figures in the past).
+
+Depending on which version of Python you are using, the source code might either be in:<br>
+```bash
+/home/jkimball/haasx092/.local/lib/python3.7/site-packages/jcvi/graphics
+```
+For Python 3.7<br>
+or<brr>
+```bash
+/home/jkimball/haasx092/.local/lib/python3.8/site-packages/jcvi/graphics
+```
+For Python 3.8
+  
+I'm making every effort to make sure everyone in the lab will have permission to access these files in my system, but if you can't access them, you can always download your own instance of MCscan.
+
+Back to the main problem at hand. Based on the code/commands used to create the figure, I think the script that needs to be edited is `synteny.py`. I found a note that might be relevant on lines 339-344 (in the Python 3.8 version).
+
+```# TODO: I spent several hours on trying to make this work - with no
+   # good solutions. To generate labels on multiple lines, each line
+   # with a different style is difficult in matplotlib. The only way,
+   # if you can tolerate an extra dot (.), is to use the recipe below.
+   # chr_label = r"\noindent " + markup(chr) + r" \\ ." if chr_label else None
+   # loc_label = r"\noindent . \\ " + label if loc_label else None
+```
+  
+I made the changes suggested to lined 346 and 347 (just below this comment), but it didn't seem to alter the behavior. Actually, the authors might have intended for users to change the behavior of the program by commenting out the code on line 346 and 347 and removing the pound signs on lines 343-344. (Note: line numbers are different in the Python 3.7 version --lines 283-288--. It's possible that a different (dependent) script actually has the code that needs to be modified. What I'm looking for is code that reads the position information from the `bed` file and prints it the graphics device. The chromosome IDs are also in the `bed` file, so it should be simple to extract that information from the file and print it at the same time. If I can find the part of the code that does that.
