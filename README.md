@@ -390,7 +390,8 @@ I'm making every effort to make sure everyone in the lab will have permission to
 
 Back to the main problem at hand. Based on the code/commands used to create the figure, I think the script that needs to be edited is `synteny.py`. I found a note that might be relevant on lines 339-344 (in the Python 3.8 version).
 
-```# TODO: I spent several hours on trying to make this work - with no
+```bash
+   # TODO: I spent several hours on trying to make this work - with no
    # good solutions. To generate labels on multiple lines, each line
    # with a different style is difficult in matplotlib. The only way,
    # if you can tolerate an extra dot (.), is to use the recipe below.
